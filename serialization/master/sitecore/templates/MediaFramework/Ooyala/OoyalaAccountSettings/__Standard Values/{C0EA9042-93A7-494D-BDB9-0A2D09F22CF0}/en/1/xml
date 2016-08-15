@@ -1,0 +1,12 @@
+<item name="__Standard Values" key="__standard values" id="{C0EA9042-93A7-494D-BDB9-0A2D09F22CF0}" tid="{FE1BA702-B3F4-4436-B9CF-4446642F5856}" mid="{00000000-0000-0000-0000-000000000000}" sortorder="100" language="en" version="1" template="ooyalaaccountsettings" parentid="{FE1BA702-B3F4-4436-B9CF-4446642F5856}"><fields><field tfid="{5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}" key="__created by" type="text"><content>sitecore\admin</content></field><field tfid="{BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}" key="__updated by" type="text"><content>sitecore\admin</content></field><field tfid="{8CDC337E-A112-42FB-BBB4-4143751E123F}" key="__revision" type="text"><content>cdc93269-90e9-4293-9880-f41b96c8bdcf</content></field><field tfid="{25BED78C-4957-4165-998A-CA1B52F67497}" key="__created" type="datetime"><content>20130820T125034</content></field><field tfid="{52807595-0F8F-4B20-8D2A-CB71D28C6103}" key="__owner" type="text"><content>sitecore\admin</content></field><field tfid="{D9CF14B1-FA16-4BA6-9288-E8A174D4D522}" key="__updated" type="datetime"><content>20130902T174042:635137404421447834</content></field><field tfid="{12112D15-A3DE-4B42-A700-DE1B9666391B}" key="playbackeventsrules" type="Rules"><content>&lt;ruleset&gt;
+  &lt;rule uid="{5A63287F-B1A0-4AB7-AA35-8022F06E14E3}"&gt;
+    &lt;conditions&gt;
+      &lt;condition id="{4888ABBB-F17D-4485-B14B-842413F88732}" uid="6976A1A900404E5DBDD78A0DD40FB88D" /&gt;
+    &lt;/conditions&gt;
+    &lt;actions&gt;
+      &lt;action id="{9850DB80-D70F-410B-9A5C-E825B4DE8F94}" uid="FB76160596E94C94B72C2DB67FC2F433" /&gt;
+      &lt;action id="{209A6D7F-D645-4606-8B63-678149DCDB5F}" uid="3E470589BCD741F3B408B6176E35E1FD" /&gt;
+      &lt;action id="{0FD811D2-CEC2-4121-A78C-936E579E2377}" uid="FFD920CD8FC5458889EADD5D228D2BA3" /&gt;
+    &lt;/actions&gt;
+  &lt;/rule&gt;
+&lt;/ruleset&gt;</content></field></fields></item>

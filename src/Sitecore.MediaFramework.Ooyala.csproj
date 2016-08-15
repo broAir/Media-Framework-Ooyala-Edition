@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C113E1A-0F32-4367-827A-8921F36EAD1B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.MediaFramework.Ooyala</RootNamespace>
+    <AssemblyName>Sitecore.MediaFramework.Ooyala</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug 7.1|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug 7.1\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SC71</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.104.2.0\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch">
+      <HintPath>bin\Sitecore.ContentSearch.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.Integration.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.Integration.Common.1.0.46\lib\net45\Sitecore.Integration.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=7.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.MediaFramework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.MediaFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sitecore.RestSharp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.RestSharp.1.1.70\lib\net45\Sitecore.RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analytics\ChannelEventTrigger.cs" />
+    <Compile Include="Analytics\VideoEventTrigger.cs" />
+    <Compile Include="Cleanup\AssetsCleanupExecuter.cs" />
+    <Compile Include="Cleanup\LabelsCleanupExecuter.cs" />
+    <Compile Include="Cleanup\OoyalaCleanupExecuter.cs" />
+    <Compile Include="Cleanup\PlayersCleanupExecuter.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Entities\Assets\ReferencedPlayer.cs" />
+    <Compile Include="Entities\Collections\PagedCollection.cs" />
+    <Compile Include="Entities\Channel.cs" />
+    <Compile Include="Entities\Label.cs" />
+    <Compile Include="Entities\Asset.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\Players\Branding.cs" />
+    <Compile Include="Entities\Players\Playback.cs" />
+    <Compile Include="Entities\Players\RelatedVideos.cs" />
+    <Compile Include="Entities\Players\Scrubber.cs" />
+    <Compile Include="Entities\Players\Watermark.cs" />
+    <Compile Include="Entities\Video.cs" />
+    <Compile Include="Entities\VideoToUpload.cs" />
+    <Compile Include="Export\AssetExporter.cs" />
+    <Compile Include="Export\ChannelExporter.cs" />
+    <Compile Include="Export\LabelExporter.cs" />
+    <Compile Include="Export\PlayerExporter.cs" />
+    <Compile Include="Export\VideoExporter.cs" />
+    <Compile Include="FieldIDs.cs" />
+    <Compile Include="Import\ChannelCollectionImporter.cs" />
+    <Compile Include="Import\PlayerCollectionImporter.cs" />
+    <Compile Include="Import\AssetCollectionImporter.cs" />
+    <Compile Include="Import\LabelCollectionImporter.cs" />
+    <Compile Include="Import\EntityCollectionImporter.cs" />
+    <Compile Include="Import\VideoCollectionImporter.cs" />
+    <Compile Include="Indexing\ComputedFields\LabelParentId.cs" />
+    <Compile Include="Indexing\Entities\ChannelSearchResult.cs" />
+    <Compile Include="Indexing\Entities\AssetSearchResult.cs" />
+    <Compile Include="Indexing\Entities\PlayerSearchResult.cs" />
+    <Compile Include="Indexing\Entities\LabelSearchResult.cs" />
+    <Compile Include="Indexing\Entities\VideoSearchResult.cs" />
+    <Compile Include="RestSharp\Tokens\OoyalaTimestampToken.cs" />
+    <Compile Include="Synchronize\EntityCreators\AssetEntityCreator.cs" />
+    <Compile Include="Synchronize\EntityCreators\ChannelEntityCreator.cs" />
+    <Compile Include="Synchronize\EntityCreators\LabelEntityCreator.cs" />
+    <Compile Include="Synchronize\EntityCreators\PlayerEntityCreator.cs" />
+    <Compile Include="Synchronize\EntityCreators\VideoEntityCreator.cs" />
+    <Compile Include="Synchronize\Fallback\AssetFallback.cs" />
+    <Compile Include="Synchronize\Fallback\ChannelFallback.cs" />
+    <Compile Include="Synchronize\Fallback\LabelFallback.cs" />
+    <Compile Include="Synchronize\Fallback\PlayerFallback.cs" />
+    <Compile Include="Synchronize\Fallback\VideoFallback.cs" />
+    <Compile Include="Players\OoyalaPlayerMarkupGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\OoyalaAthenticator.cs" />
+    <Compile Include="Synchronize\References\AssetLabelsSynchronizer.cs" />
+    <Compile Include="Synchronize\AssetSynchronizer.cs" />
+    <Compile Include="Synchronize\PlayerSynchronizer.cs" />
+    <Compile Include="Synchronize\ChannelSynchronizer.cs" />
+    <Compile Include="Synchronize\References\AssetMetadataSynchronizer.cs" />
+    <Compile Include="Synchronize\References\AssetPlayerSynchronizer.cs" />
+    <Compile Include="Synchronize\References\ChannelLineupSynchronizer.cs" />
+    <Compile Include="Synchronize\VideoSynchronizer.cs" />
+    <Compile Include="Synchronize\LabelSynchronizer.cs" />
+    <Compile Include="TemplateIDs.cs" />
+    <Compile Include="Upload\VideoUploader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Config\Include\Sitecore.ContentSearch.MediaFramework.Ooyala.config" />
+    <None Include="App_Config\Include\Sitecore.ContentSearch.Solr.MediaFramework.Ooyala.config.example" />
+    <None Include="App_Config\Include\Sitecore.MediaFramework.Services.Ooyala.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Config\Include\Sitecore.RestSharp.Ooyala.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.MediaFramework\Sitecore.MediaFramework.csproj">
+      <Project>{288e6e2f-9027-4746-b6c9-1d0a04e484aa}</Project>
+      <Name>Sitecore.MediaFramework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\128x128\Ooyala_logo.png" />
+    <Content Include="Images\16x16\Ooyala_logo.png" />
+    <Content Include="Images\24x24\Ooyala_logo.png" />
+    <Content Include="Images\32x32\Ooyala_logo.png" />
+    <Content Include="Images\48x48\Ooyala_logo.png" />
+    <Content Include="js\Analytics\ooyala.js" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)Sitecore.MediaFramework.Ooyala*" "$(SolutionDir)Website\bin" /S /F /R /Y /I
+xcopy "$(ProjectDir)App_Config\Include\*" "$(SolutionDir)Website\App_Config\Include" /S /F /R /Y /I
+xcopy "$(SolutionDir)Sitecore.MediaFramework.Ooyala\References\*" "$(SolutionDir)Website\bin" /S /F /R /Y /I
+xcopy "$(ProjectDir)js\*.js" "$(SolutionDir)Website\sitecore modules\Web\MediaFramework\js" /S /F /R /Y /I
+xcopy "$(ProjectDir)Images\*" "$(SolutionDir)Website\sitecore\shell\Themes\Standard\MediaFramework\Ooyala" /S /F /R /Y /I</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
