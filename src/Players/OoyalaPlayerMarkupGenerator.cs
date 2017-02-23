@@ -71,7 +71,7 @@ namespace Sitecore.MediaFramework.Ooyala.Players
       result.ScriptUrls.Add(string.Format(ScriptUrl, playerId, id));
       result.ScriptUrls.Add(this.AnalyticsScriptUrl);
 
-      string parameters = !Context.PageMode.IsPageEditorEditing ? this.GetAdditionalParametersStr(args) : "{}";
+      string parameters = !Context.PageMode.IsExperienceEditorEditing ? this.GetAdditionalParametersStr(args) : "{}";
 
       result.BottomScripts.Add(id, string.Format("{0}.ready(function() {{ {0}.Player.create('{0}', '{1}',{2}); }});", id, args.MediaItem[FieldIDs.MediaElement.EmbedCode], parameters));
       return result;
